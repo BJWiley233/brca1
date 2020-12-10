@@ -12,6 +12,7 @@ fisher.test(x)
 ## rest of the samples including first 10
 ## total 204
 setwd("/home/coyote/JHU_Fall_2020/Genome_Analysis/Genome_project")
+## read in sheets 1,2,3 from SRRs to test.xlsx
 brca1.exons.vars <- read.csv("SRRs to test - All 204.csv")
 pheno <- read.csv("SRRs to test - Pheno.csv")
 SNP <- read.csv("SRRs to test - 41223094T C.csv", header = F)
