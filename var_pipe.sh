@@ -1,14 +1,14 @@
 #! /usr/bin/bash
 
-### run like ./var_pipe.sh srr.ids &
+### run like ./var_pipe.sh srr.ids
 
 if [ $# -lt 2 ]; then
     echo "Need srr.ids and refGene_exons.bed files"
     exit 1
 fi
 
-#export FREEBAYES=$TOOLS/freebayes-v1.3.0-1
-#export TRIMMOMATIC=/export/home/bwiley4/data/unit10/Trimmomatic-0.39/trimmomatic-0.39.jar
+export FREEBAYES=$TOOLS/freebayes-v1.3.0-1
+export TRIMMOMATIC=/export/home/bwiley4/data/unit10/Trimmomatic-0.39/trimmomatic-0.39.jar
 
 # get reads from SRA
 parallel -a $1 fastq-dump --split-files --origfmt --gzip;
